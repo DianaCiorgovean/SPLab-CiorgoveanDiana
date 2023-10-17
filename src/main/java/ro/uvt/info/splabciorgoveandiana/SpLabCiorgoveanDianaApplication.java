@@ -7,17 +7,24 @@ import ro.uvt.info.splabciorgoveandiana.entities.*;
 @SpringBootApplication
 public class SpLabCiorgoveanDianaApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(SpLabCiorgoveanDianaApplication.class, args);
-
-		Author author = new Author("Thomas Cormen");
-		Book book = new Book("Introduction to Algorithms");
-		Chapter chapter = new Chapter("Chapter 1");
+		//SpringApplication.run(SpLabCiorgoveanDianaApplication.class, args);
 
 
-
-		book.print();
-		author.print();
-		chapter.print();
+		Book discoTitanic = new Book("Disco Titanic");
+		Author author = new Author("Radu Pavel Gheo");
+		discoTitanic.addAuthor(author);
+		int indexChapterOne = discoTitanic.createChapter("Capitolul 1");
+		Chapter chp1 = discoTitanic.getChapter(indexChapterOne);
+		int indexSubChapterOneOne = chp1.createSubChapter("Subcapitolul 1.1");
+		SubChapter scOneOne = chp1.getSubChapter(indexSubChapterOneOne);
+		scOneOne.createNewParagraph("Paragraph 1");
+		scOneOne.createNewParagraph("Paragraph 2");
+		scOneOne.createNewParagraph("Paragraph 3");
+		scOneOne.createNewImage("Image 1");
+		scOneOne.createNewParagraph("Paragraph 4");
+		scOneOne.createNewTable("Table 1");
+		scOneOne.createNewParagraph("Paragraph 5");
+		scOneOne.print();
+	}
 	}
 
-}

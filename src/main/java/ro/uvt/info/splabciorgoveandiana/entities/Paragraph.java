@@ -1,9 +1,9 @@
 package ro.uvt.info.splabciorgoveandiana.entities;
 
 class Paragraph {
-    private String text;
+    String text;
 
-    public Paragraph(String text) {
+    public Paragraph() {
         this.text = text;
     }
 

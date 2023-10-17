@@ -1,9 +1,9 @@
 package ro.uvt.info.splabciorgoveandiana.entities;
 
 class Table {
-    private String title;
+    String title;
 
-    public Table(String title) {
+    public Table() {
         this.title = title;
     }
 
