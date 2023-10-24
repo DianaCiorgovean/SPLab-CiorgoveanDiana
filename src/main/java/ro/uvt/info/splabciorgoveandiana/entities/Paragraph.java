@@ -1,13 +1,25 @@
 package ro.uvt.info.splabciorgoveandiana.entities;
 
-class Paragraph {
+public class Paragraph implements Element {
     String text;
 
-    public Paragraph() {
+    public Paragraph(String text) {
         this.text = text;
     }
 
     public void print() {
         System.out.println("Paragraph: " + text);
+    }
+
+    public void add(Element a) {
+
+    }
+
+    public Element get(int nr) {
+        return null;
+    }
+
+    public void remove(Element a) {
+
     }
 }
