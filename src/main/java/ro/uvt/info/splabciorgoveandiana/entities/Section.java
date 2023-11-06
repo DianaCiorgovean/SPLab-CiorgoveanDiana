@@ -3,7 +3,7 @@ package ro.uvt.info.splabciorgoveandiana.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Section implements Element {
+public class Section extends Element {
     String title;
     public List<Element> elementList= new ArrayList<>();
     public Section(String title){
@@ -16,16 +16,21 @@ public class Section implements Element {
             e.print();
     }
 
-    public void add(Element a) {
-        elementList.add(a);
-    }
-
-    public Element get(int nr) {
+    @Override
+    public Element clone() {
         return null;
     }
 
+    @Override
+    public void add(Element a) {
+        elementList.add(a);
+    }
+    @Override
+    public Element get(int nr) {
+        return null;
+    }
+    @Override
     public void remove(Element a) {
-
     }
 
 }

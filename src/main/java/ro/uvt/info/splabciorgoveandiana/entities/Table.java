@@ -1,6 +1,6 @@
 package ro.uvt.info.splabciorgoveandiana.entities;
 
-class Table implements Element {
+class Table extends Element {
     String title;
 
     public Table() {
@@ -11,15 +11,19 @@ class Table implements Element {
         System.out.println("Table: " + title);
     }
 
-    public void add(Element a) {
-
+    @Override
+    public Element clone() {
+        return null;
     }
-
+    @Override
+    public void add(Element a) {
+    }
+    @Override
     public Element get(int nr) {
         return null;
     }
 
+    @Override
     public void remove(Element a) {
-
     }
 }
