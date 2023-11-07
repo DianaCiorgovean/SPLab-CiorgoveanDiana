@@ -1,6 +1,5 @@
-package ro.uvt.info.splabciorgoveandiana.entities;
+package ro.uvt.info.splabciorgoveandiana.models;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 public class Book extends Section{
     private String title;

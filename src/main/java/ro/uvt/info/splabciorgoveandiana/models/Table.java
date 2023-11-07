@@ -1,4 +1,4 @@
-package ro.uvt.info.splabciorgoveandiana.entities;
+package ro.uvt.info.splabciorgoveandiana.models;
 
 class Table extends Element {
     String title;

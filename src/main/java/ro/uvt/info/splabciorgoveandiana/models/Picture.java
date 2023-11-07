@@ -1,7 +1,5 @@
 
-package ro.uvt.info.splabciorgoveandiana.entities;
-
-import java.awt.Dimension;
+package ro.uvt.info.splabciorgoveandiana.models;
 
 public interface Picture {
     public String getUrl();

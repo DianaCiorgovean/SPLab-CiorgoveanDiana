@@ -1,6 +1,4 @@
-package ro.uvt.info.splabciorgoveandiana.entities;
-
-import java.awt.*;
+package ro.uvt.info.splabciorgoveandiana.models;
 
 public class ImageProxy extends Element  implements Picture{
     private Image realImage;

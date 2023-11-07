@@ -1,4 +1,4 @@
-package ro.uvt.info.splabciorgoveandiana.entities;
+package ro.uvt.info.splabciorgoveandiana.models;
 import lombok.Getter;
 import lombok.Setter;
 public class Paragraph extends Element {
