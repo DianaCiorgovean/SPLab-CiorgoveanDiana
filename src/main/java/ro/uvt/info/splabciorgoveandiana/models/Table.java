@@ -1,9 +1,9 @@
 package ro.uvt.info.splabciorgoveandiana.models;
 
-class Table extends Element {
+public class Table extends Element {
     String title;
 
-    public Table() {
+    public Table(String s) {
         this.title = title;
     }
 

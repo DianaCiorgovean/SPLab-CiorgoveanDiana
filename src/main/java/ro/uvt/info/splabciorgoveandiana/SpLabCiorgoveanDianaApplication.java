@@ -7,27 +7,18 @@ import org.springframework.context.ApplicationContext;
 import ro.uvt.info.splabciorgoveandiana.difexample.ClientComponent;
 import ro.uvt.info.splabciorgoveandiana.difexample.SingletonComponent;
 import ro.uvt.info.splabciorgoveandiana.difexample.TransientComponent;
+import ro.uvt.info.splabciorgoveandiana.models.Book;
+import ro.uvt.info.splabciorgoveandiana.models.RenderContentVisitor;
+
 @SpringBootApplication
 public class SpLabCiorgoveanDianaApplication {
 		public static void main(String[] args) {
 //
-		ApplicationContext context = SpringApplication.run(SpLabCiorgoveanDianaApplication.class, args);
-		TransientComponent transientBean = context.getBean(TransientComponent.class);
-		transientBean.operation();
+			Book book = new Book("Design Patterns");
+			new RenderContentVisitor().visitBook(book);
+			//book.accept(new RenderContentVisitor());
 
-		transientBean = context.getBean(TransientComponent.class);
-		transientBean.operation();
-
-		SingletonComponent singletonBean = context.getBean(SingletonComponent.class);
-		singletonBean.operation();
-
-		singletonBean = context.getBean(SingletonComponent.class);
-		singletonBean.operation();
-		ClientComponent c = context.getBean(ClientComponent.class);
-		c.operation();
-		c = (ClientComponent)context.getBean("clientComponent");
-		c.operation();
-	}
+		}
 }
 
 

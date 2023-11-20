@@ -3,7 +3,7 @@ package ro.uvt.info.splabciorgoveandiana.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Section extends Element {
+public class Section extends Element implements Visitee {
     String title;
     public List<Element> elementList= new ArrayList<>();
     public Section(String title){
@@ -33,4 +33,8 @@ public class Section extends Element {
     public void remove(Element a) {
     }
 
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitSection(this);
+    }
 }

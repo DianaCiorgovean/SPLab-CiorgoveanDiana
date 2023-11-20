@@ -2,7 +2,7 @@ package ro.uvt.info.splabciorgoveandiana.models;
 
 import java.util.concurrent.TimeUnit;
 
-public class Image extends Element implements Picture {
+public class Image extends Element implements Picture, Visitee{
     private String url;
     private String imageContent;
 
@@ -41,5 +41,11 @@ public class Image extends Element implements Picture {
     @Override
     public String getUrl() {
         return url;
+    }
+
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitImage(this);
     }
 }

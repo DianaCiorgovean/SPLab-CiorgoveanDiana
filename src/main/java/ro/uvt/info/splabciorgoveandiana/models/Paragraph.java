@@ -1,7 +1,7 @@
 package ro.uvt.info.splabciorgoveandiana.models;
 import lombok.Getter;
 import lombok.Setter;
-public class Paragraph extends Element {
+public class Paragraph extends Element implements Visitee {
     @Getter
     private final String text;
     @Setter
@@ -29,5 +29,10 @@ public class Paragraph extends Element {
     }
     @Override
     public void remove(Element a) {
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitParagraph(this);
     }
 }

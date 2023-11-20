@@ -1,7 +1,10 @@
 package ro.uvt.info.splabciorgoveandiana.models;
+import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.List;
-public class Book extends Section{
+public class Book extends Section implements Visitee{
+    @Getter
     private String title;
     private TableOfContents tableOfContents;
 
@@ -38,6 +41,12 @@ public class Book extends Section{
     public void addContent(Element a) {
         elementList.add(a);
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitBook(this);
+    }
+
 }
 
 
