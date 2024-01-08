@@ -6,7 +6,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/books")
 public class BooksController {
-
     private List<Book> books = new ArrayList<>();
 
         // GET /books
@@ -55,5 +54,5 @@ public class BooksController {
         private int generateUniqueId() {
             return books.size() + 1;
         }
-    }
+}
 
