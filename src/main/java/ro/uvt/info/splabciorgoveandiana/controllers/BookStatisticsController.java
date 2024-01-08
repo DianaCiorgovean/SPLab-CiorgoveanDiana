@@ -10,7 +10,7 @@ import ro.uvt.info.splabciorgoveandiana.LabVisitor.*;
 
 @RestController
 @RequestMapping("/books")
-public class BookControler {
+public class BookStatisticsController {
     @GetMapping("/statistics")
     public ResponseEntity<?> printStatistics() {
         Section cap1 = new Section("Capitolul 1");

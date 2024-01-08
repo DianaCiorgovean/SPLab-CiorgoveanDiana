@@ -5,6 +5,7 @@ import lombok.Getter;
 @Getter
 public class BookStatistics implements Visitor{
     private int nrImages;
+    private int nrTables;
     private int nrParagraphs;
 
     @Override
@@ -32,11 +33,16 @@ public class BookStatistics implements Visitor{
     public void visitImage(Image image) {
         nrImages++;
     }
+    @Override
+    public void visitTable(Table table) {
+        nrTables++;
+    }
 
     public void printStatistics() {
         System.out.println("Book Statistics:");
-        System.out.println(" Number of images: "+ nrImages);
-        System.out.println(" Number of paragraphs: "+ nrParagraphs);
+        System.out.println("*** Number of images: " + nrImages);
+        System.out.println("*** Number of tables: " + nrTables);
+        System.out.println("*** Number of paragraphs: " + nrParagraphs);
 
     }
 }

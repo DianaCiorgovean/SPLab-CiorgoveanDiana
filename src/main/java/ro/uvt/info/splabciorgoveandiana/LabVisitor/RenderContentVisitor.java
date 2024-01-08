@@ -1,10 +1,6 @@
 package ro.uvt.info.splabciorgoveandiana.LabVisitor;
 
-import ro.uvt.info.splabciorgoveandiana.LabVisitor.Visitor;
-import ro.uvt.info.splabciorgoveandiana.models.Book;
-import ro.uvt.info.splabciorgoveandiana.models.Image;
-import ro.uvt.info.splabciorgoveandiana.models.Paragraph;
-import ro.uvt.info.splabciorgoveandiana.models.Section;
+import ro.uvt.info.splabciorgoveandiana.models.*;
 
 public class RenderContentVisitor implements Visitor {
 
@@ -23,6 +19,11 @@ public class RenderContentVisitor implements Visitor {
 
     @Override
     public void visitImage(Image i) {
+
+    }
+
+    @Override
+    public void visitTable(Table table) {
 
     }
 
