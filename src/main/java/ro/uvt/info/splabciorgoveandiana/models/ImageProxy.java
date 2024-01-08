@@ -1,6 +1,8 @@
 package ro.uvt.info.splabciorgoveandiana.models;
 
-public class ImageProxy extends Element  implements Picture{
+import java.awt.image.BufferedImage;
+
+public class ImageProxy extends Element  implements Picture {
     private Image realImage;
     private String url;
     public ImageProxy(String url){
@@ -16,6 +18,26 @@ public class ImageProxy extends Element  implements Picture{
     @Override
     public String getUrl() {
         return url;
+    }
+
+    @Override
+    public BufferedImage getImage() {
+        return null;
+    }
+
+    @Override
+    public void add(Element e) {
+
+    }
+
+    @Override
+    public void remove(Element e) {
+
+    }
+
+    @Override
+    public Element get(int nr) {
+        return null;
     }
 
     @Override

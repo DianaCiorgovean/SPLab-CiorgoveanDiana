@@ -1,8 +1,12 @@
 package ro.uvt.info.splabciorgoveandiana.models;
 
+import ro.uvt.info.splabciorgoveandiana.LabVisitor.Visitee;
+import ro.uvt.info.splabciorgoveandiana.LabVisitor.Visitor;
+
+import java.awt.image.BufferedImage;
 import java.util.concurrent.TimeUnit;
 
-public class Image extends Element implements Picture, Visitee{
+public class Image extends Element implements Picture, Visitee {
     private String url;
     private String imageContent;
 
@@ -41,6 +45,11 @@ public class Image extends Element implements Picture, Visitee{
     @Override
     public String getUrl() {
         return url;
+    }
+
+    @Override
+    public BufferedImage getImage() {
+        return null;
     }
 
 

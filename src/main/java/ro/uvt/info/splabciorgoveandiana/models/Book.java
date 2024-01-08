@@ -1,30 +1,33 @@
 package ro.uvt.info.splabciorgoveandiana.models;
 import lombok.Getter;
+import ro.uvt.info.splabciorgoveandiana.LabVisitor.Visitee;
+import ro.uvt.info.splabciorgoveandiana.LabVisitor.Visitor;
 
 import java.util.ArrayList;
 import java.util.List;
-public class Book extends Section implements Visitee{
-    @Getter
+@Getter
+public class Book extends Section implements Visitee {
+
     private String title;
     private TableOfContents tableOfContents;
 
     public List<Author> author = new ArrayList<Author>();
 
 
-    public Book(String title)
-    {
+    public Book(String title) {
         super(title);
-        this.title=title;
+        this.title = title;
     }
-    public void print(){
+
+    public void print() {
         System.out.println(title);
-    for( Author a: author)
-         a.print();
-    for (Element e: elementList)
-         e.print();
+        for (Author a : author)
+            a.print();
+        for (Element e : elementList)
+            e.print();
     }
-    public void addAuthor(Author nume)
-    {
+
+    public void addAuthor(Author nume) {
         author.add(nume);
     }
 
@@ -46,8 +49,6 @@ public class Book extends Section implements Visitee{
     public void accept(Visitor visitor) {
         visitor.visitBook(this);
     }
-
 }
-
 
 

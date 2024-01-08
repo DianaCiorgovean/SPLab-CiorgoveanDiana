@@ -1,10 +1,11 @@
 
 package ro.uvt.info.splabciorgoveandiana.models;
 
+import java.awt.image.BufferedImage;
+
 public interface Picture {
     public String getUrl();
-   // public Dimension dim();
 
-
-
+    BufferedImage getImage();
+    // public Dimension dim();
 }

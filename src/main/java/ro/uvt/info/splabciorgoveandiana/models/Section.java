@@ -1,5 +1,8 @@
 package ro.uvt.info.splabciorgoveandiana.models;
 
+import ro.uvt.info.splabciorgoveandiana.LabVisitor.Visitee;
+import ro.uvt.info.splabciorgoveandiana.LabVisitor.Visitor;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,4 +40,6 @@ public class Section extends Element implements Visitee {
     public void accept(Visitor visitor) {
         visitor.visitSection(this);
     }
+
+
 }
