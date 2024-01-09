@@ -11,16 +11,14 @@ import java.util.List;
 public class Book extends Section implements Visitee {
 
     private String title;
-    int Id;
     private TableOfContents tableOfContents;
 
     public List<Author> author = new ArrayList<>();
 
-
-    public Book(String title,int Id) {
+    public Book(String title) {
         super(title);
         this.title = title;
-        this.Id = Id;
+        //this.Id = Id;
     }
 
     public void print() {
@@ -54,6 +52,11 @@ public class Book extends Section implements Visitee {
         visitor.visitBook(this);
     }
 
-}
+    public void setId(int i) {
+    }
 
+    public int getId() {
+        return 0;
+    }
+}
 

@@ -1,15 +1,14 @@
 package ro.uvt.info.splabciorgoveandiana;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import ro.uvt.info.splabciorgoveandiana.models.Book;
-import ro.uvt.info.splabciorgoveandiana.LabVisitor.RenderContentVisitor;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+@EnableJpaRepositories(basePackages = "ro.uvt.info.splabciorgoveandiana.entities")
 @SpringBootApplication
 public class SpLabCiorgoveanDianaApplication {
 		public static void main(String[] args) {
-			Book book = new Book("Design Patterns",1);
-			new RenderContentVisitor().visitBook(book);
-			//book.accept(new RenderContentVisitor());
+			SpringApplication.run(SpLabCiorgoveanDianaApplication.class, args);
 
 		}
 }
