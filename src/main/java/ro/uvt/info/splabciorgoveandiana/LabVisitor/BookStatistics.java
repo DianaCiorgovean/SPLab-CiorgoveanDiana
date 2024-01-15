@@ -38,6 +38,11 @@ public class BookStatistics implements Visitor{
         nrTables++;
     }
 
+    @Override
+    public void visitElement(Element e) {
+
+    }
+
     public void printStatistics() {
         System.out.println("Book Statistics:");
         System.out.println("*** Number of images: " + nrImages);

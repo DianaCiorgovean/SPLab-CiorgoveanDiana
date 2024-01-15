@@ -27,6 +27,11 @@ public class RenderContentVisitor implements Visitor {
 
     }
 
+    @Override
+    public void visitElement(Element e) {
+
+    }
+
     private void renderBook(Book book) {
         System.out.println("Rendering Book: " + book.getTitle());
     }

@@ -2,7 +2,7 @@ package ro.uvt.info.splabciorgoveandiana.models;
 
 import java.awt.image.BufferedImage;
 
-public class ImageProxy extends Element  implements Picture {
+public class ImageProxy extends Element implements Picture {
     private Image realImage;
     private String url;
     public ImageProxy(String url){

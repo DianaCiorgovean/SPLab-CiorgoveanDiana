@@ -25,5 +25,6 @@ public abstract class Element {
     public abstract Element clone();
 
     public void accept(BookStatistics bookStatistics) {
+        bookStatistics.visitElement(this);
     }
 }

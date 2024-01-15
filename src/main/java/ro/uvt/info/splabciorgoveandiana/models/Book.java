@@ -18,7 +18,6 @@ public class Book extends Section implements Visitee {
     public Book(String title) {
         super(title);
         this.title = title;
-        //this.Id = Id;
     }
 
     public void print() {
